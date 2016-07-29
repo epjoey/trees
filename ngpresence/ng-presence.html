@@ -1,0 +1,9 @@
+<div class='presence'>
+    <span class='small text-muted presence-label' ng-show='users.length'>Also here:</span>
+    <span class='users'>
+        <span ng-repeat='user in users|limitTo:maxUsersToRender' tooltip='{{ user.fullName }}' tooltip-placement='bottom' class='user'>
+          <img ng-src='{{ user.imageUrl }}' width='25' height='25' />
+        </span>
+        <span class='user text-center text-muted small' ng-if='excessUsers.length' ng-bind="'+'+(excessUsers.length)" tooltip-placement='bottom' tooltip-html='excessUsersTooltip'></span>
+    </span>
+</div>
